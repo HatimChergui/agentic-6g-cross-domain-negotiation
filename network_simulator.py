@@ -2,7 +2,6 @@ import numpy as np
 from typing import Dict, Any, Optional
 from config import NUM_TIME_STEPS, POWER_PER_20MHZ_CARRIER_W, REFERENCE_BANDWIDTH_MHZ
 
-# Moved these constants to the module level so they can be imported by other files.
 _TRAFFIC_BASE_SLICE = 50_000_000  # 50 Mbps
 _TRAFFIC_VARIATION_SLICE = 30_000_000  # 30 Mbps
 _CAPACITY_BASE_SLICE = 65_000_000  # 65 Mbps
@@ -28,14 +27,13 @@ class NetworkSimulator:
 
         self.cpu_allocation_conflict_count_internal = 0
 
-        # --- FIX STARTS HERE ---
         # Expose module-level constants as instance attributes for backward compatibility
         # This allows external modules to access them via the simulator instance.
         self._TRAFFIC_BASE_SLICE = _TRAFFIC_BASE_SLICE
         self._TRAFFIC_VARIATION_SLICE = _TRAFFIC_VARIATION_SLICE
         self._CAPACITY_BASE_SLICE = _CAPACITY_BASE_SLICE
         self._CAPACITY_VARIATION_SLICE = _CAPACITY_VARIATION_SLICE
-        # --- END OF FIX ---
+
 
         # Initialize traffic and capacity using the module-level constants
         self.traffic = self._generate_random_traffic()
@@ -160,4 +158,5 @@ class NetworkSimulator:
         self.cpu_allocation_conflict_count_internal = 0
         self.current_spectral_efficiency = (self.min_spectral_efficiency + self.max_spectral_efficiency) / 2
         self._update_current_state_metrics_only()
+
 
