@@ -1,6 +1,6 @@
 # LLM-powered Agentic 6G Cross-Domain Negotiation
 
-This project simulates a negotiation between two AI agents, a RAN (ENergy Saving) Agent and an Edge (Latency Assurance) Agent, to reconcile their conflicying goals. The simulation evaluates different strategies, including using a collective memory with and without debiasing mechanisms.
+This project simulates a negotiation between two AI agents, a RAN (Energy Saving) Agent and an Edge (Latency Assurance) Agent, to reconcile their conflicting goals. The simulation evaluates different strategies, including using a collective memory with and without debiasing mechanisms.
 
 ## Project Structure
 
