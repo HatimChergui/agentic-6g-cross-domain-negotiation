@@ -35,7 +35,6 @@ class E2APISimulator:
             "current_metrics": updated_metrics
         }
 
-# --- SINGLETON INSTANCE SETUP ---
 
 # 1. Create a single instance of the underlying network simulator.
 #    This instance will be shared across the application.
@@ -58,10 +57,10 @@ def enforce_actions(ran_bandwidth_mhz: float, edge_cpu_frequency_ghz: float) -> 
     """Module-level wrapper for the enforce_actions tool."""
     return _api_simulator_instance.enforce_actions(ran_bandwidth_mhz, edge_cpu_frequency_ghz)
 
-# --- FIX STARTS HERE ---
 # 5. Expose the configuration constants at the module level for global access.
 MAX_RAN_BW_MHZ = _api_simulator_instance.MAX_RAN_BW_MHZ
 MIN_RAN_BW_MHZ = _api_simulator_instance.MIN_RAN_BW_MHZ
 MAX_EDGE_CPU_GHZ = _api_simulator_instance.MAX_EDGE_CPU_GHZ
-# --- END OF FIX ---
+
+
 
