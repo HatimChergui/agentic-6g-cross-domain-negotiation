@@ -1,6 +1,6 @@
 # LLM-powered Agentic 6G Cross-Domain Negotiation
 
-This project simulates a negotiation between two AI agents, a RAN (Radio Access Network) Agent and an Edge Agent, to optimize network slice resources. The simulation evaluates different strategies, including using a collective memory with and without debiasing mechanisms.
+This project simulates a negotiation between two AI agents, a RAN (ENergy Saving) Agent and an Edge (Latency Assurance) Agent, to reconcile their conflicying goals. The simulation evaluates different strategies, including using a collective memory with and without debiasing mechanisms.
 
 ## Project Structure
 
