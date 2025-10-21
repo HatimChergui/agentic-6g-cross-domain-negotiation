@@ -1,4 +1,4 @@
-# --- Global simulation parameters (constants that don't change per trial) ---
+# --- Global simulation parameters ---
 NUM_TRIALS = 10
 # Number of time steps in a traffic/capacity realization
 NUM_TIME_STEPS = 8
@@ -13,3 +13,4 @@ REFERENCE_BANDWIDTH_MHZ = 20.0
 # Define the reference energy for savings calculation.
 # This represents a baseline or maximum energy consumption scenario.
 REFERENCE_ENERGY_FOR_SAVINGS_W = 20.0
+
