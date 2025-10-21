@@ -1,5 +1,5 @@
 # --- Global simulation parameters (constants that don't change per trial) ---
-
+NUM_TRIALS = 10
 # Number of time steps in a traffic/capacity realization
 NUM_TIME_STEPS = 8
 
