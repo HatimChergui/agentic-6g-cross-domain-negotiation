@@ -276,7 +276,7 @@ class LLMAgent:
                 if not inferred_config and not patterns_to_avoid:
                     memory_summary_parts.append("No highly relevant past strategies found to distill concrete suggestions.")
                 
-                # MODIFIED: Emphasize learning and reasoning over direct application
+                # Emphasize learning and reasoning over direct application
                 memory_summary_parts.append("\n**Crucially, use these insights to inform your reasoning and adapt your proposal for the current situation.** Focus on *why* past strategies succeeded or failed, and *how* to adjust to avoid conflicts and meet SLAs. Do not simply copy past actions; instead, learn and apply that learning intelligently. **Prioritize avoiding negotiation conflicts.**")
                 memory_summary = "\n".join(memory_summary_parts)
             else:
@@ -297,7 +297,7 @@ class LLMAgent:
         if self.last_proposed_config:
             initial_agent_prompt_parts.append({"text": f"Your last proposed configuration was: RAN BW = {self.last_proposed_config.get('ran_bandwidth_mhz')} MHz, Edge CPU = {self.last_proposed_config.get('edge_cpu_frequency_ghz')} GHz."})
 
-        # MODIFIED: Only append sanitized_memory_summary if it's not empty
+        # Only append sanitized_memory_summary if it's not empty
         if sanitized_memory_summary:
             initial_agent_prompt_parts.append({"text": sanitized_memory_summary})
 
@@ -358,10 +358,10 @@ class LLMAgent:
                 # Step 2: If no tool calls in the response, it should be a text message
                 negotiation_message = self._extract_text_from_response(response)
                 
-                # --- MODIFICATION ---
+            
                 # Call the refactored parsing function.
                 parsed_move = parse_agent_message(negotiation_message)
-                # --- END MODIFICATION ---
+    
 
 
                 is_late_iteration_fallback_attempt = False
@@ -447,7 +447,7 @@ class LLMAgent:
                                 if predicted_cpu_conflict > current_metrics["cpu_allocation_conflict_count"]:
                                     adjustment_hint += "Additionally, your proposed Edge CPU frequency is causing a conflict. You MUST reduce it or ensure it's within the maximum allowed limits (up to 50 GHz)." # Updated fmax reference
 
-                                # MODIFIED: Emphasize reasoning and conflict avoidance
+                                # Emphasize reasoning and conflict avoidance
                                 adjustment_hint += "**Crucially, NO_AGREEMENT_POSSIBLE should only be declared as a last resort, after you have made multiple, reasonable attempts to find a configuration that meets the SLA and avoids conflicts through intelligent reasoning and adaptation.** Do not give up after a single failed internal test. Adjust, re-test, and iterate. **Prioritize avoiding negotiation conflicts.**"
 
                                 self_correction_prompt_parts = [
@@ -604,3 +604,4 @@ class LLMAgent:
             self.last_proposed_config = parsed_move["parameters"]
 
         return final_negotiation_message
+
