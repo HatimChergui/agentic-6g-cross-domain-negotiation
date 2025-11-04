@@ -3,7 +3,7 @@
 This project simulates a negotiation between two LLM-powered agents, a RAN (Energy Saving) Agent and an Edge (Latency Assurance) Agent, to reconcile their conflicting goals. The simulation evaluates different strategies, including using a collective memory with and without debiasing mechanisms.
 ## [Citation] 
 If you use this code or any (modified) part of it, please cite it as: 
-H. Chergui, F. Rezazadeh, M. Debbah, and C. Verikoukis, “A Tutorial on Cognitive Biases in Agentic AI-Driven 6G Autonomous Networks,” arXiv preprint arXiv:2510.19973 [cs.NI], 2025. [Online]. Available: https://arxiv.org/abs/2510.19973
+H. Chergui, F. Rezazadeh, M. Debbah, and C. Verikoukis, “A Tutorial on Cognitive Biases in Agentic AI-Driven 6G Autonomous Networks,” arXiv preprint arXiv:2510.19973, 2025. [Online]. Available: https://arxiv.org/abs/2510.19973
 
 ## Project Structure
 
