@@ -2,7 +2,7 @@
 
 This project simulates a negotiation between two LLM-powered agents, a RAN (Energy Saving) Agent and an Edge (Latency Assurance) Agent, to reconcile their conflicting goals. The simulation evaluates different strategies, including using a collective memory with and without debiasing mechanisms.
 
-<img width="661" height="505" alt="use_case" src="https://github.com/user-attachments/assets/78c104a6-21ec-4d3e-87be-c90f93d34031" />
+<img width="450" height="350" alt="use_case" src="https://github.com/user-attachments/assets/78c104a6-21ec-4d3e-87be-c90f93d34031" />
 
 ## [Citation] 
 If you use this code or any (modified) part of it, please cite it as: 
