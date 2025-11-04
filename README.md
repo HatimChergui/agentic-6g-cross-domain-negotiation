@@ -4,7 +4,7 @@ This project simulates a negotiation between two LLM-powered agents, a RAN (Ener
 
 <img width="450" height="350" alt="use_case" src="https://github.com/user-attachments/assets/78c104a6-21ec-4d3e-87be-c90f93d34031" />
 
-## [Citation] 
+## Citation 
 If you use this code or any (modified) part of it, please cite it as: 
 H. Chergui, F. Rezazadeh, M. Debbah, and C. Verikoukis, “A Tutorial on Cognitive Biases in Agentic AI-Driven 6G Autonomous Networks,” arXiv preprint arXiv:2510.19973, 2025. [Online]. Available: https://arxiv.org/abs/2510.19973
 
