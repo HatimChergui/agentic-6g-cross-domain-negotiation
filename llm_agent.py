@@ -28,7 +28,7 @@ except Exception as e:
     print(f"Could not configure Google Generative AI: {e}")
 
 class LLMAgent:
-    def __init__(self, name: str, role: str, model_name: str = 'gemini-2.5-flash-preview-05-20', tools: List[Any] = None,
+    def __init__(self, name: str, role: str, model_name: str = 'gemini-2.5-flash-preview-09-2025', tools: List[Any] = None,
                  collective_memory_tool: Optional[CollectiveMemory] = None, digital_twin_instance: Optional[DigitalTwin] = None,
                  debiased_memory_prompt_enabled: bool = False): # New parameter
         self.name = name
@@ -604,6 +604,7 @@ class LLMAgent:
             self.last_proposed_config = parsed_move["parameters"]
 
         return final_negotiation_message
+
 
 
 
